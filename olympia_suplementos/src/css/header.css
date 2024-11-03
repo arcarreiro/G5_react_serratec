@@ -1,0 +1,32 @@
+.banner {
+    position: absolute; /* Para ajustar o alinhamento */
+    top: 0; /* Fixa no topo da página */
+    right: 0;
+    /* left: 0; */
+    width: 98vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333; /* Cor de fundo */
+    color: #fff;
+  }
+  
+  .banner-image {
+    height: 5rem; /* Tamanho da imagem */
+  }
+  
+  .navbar {
+    display: flex;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+  }
