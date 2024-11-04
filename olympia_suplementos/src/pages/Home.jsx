@@ -12,4 +12,4 @@ return (
 )
 }
 
-export { Home }
+export default Home

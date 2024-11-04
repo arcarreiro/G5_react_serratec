@@ -7,4 +7,4 @@ const Pedidos = () => {
     )
 }
 
-export { Pedidos }
+export default Pedidos
