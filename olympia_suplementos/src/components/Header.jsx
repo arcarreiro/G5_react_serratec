@@ -5,16 +5,22 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 function Header() {
     return (
         <>
-            <div className="banner">
-                <img src="./logo.png" alt="Banner Image" className="banner-image" />
+            <div className="outer-banner">
+                <div className="banner">
+                <a href="/"><img src="./logo.png" alt="Banner Image" className="banner-image" /></a>
                 <nav className="navbar">
                     <ul className="nav-links">
-                        <li><Link to='/'>Home</Link></li>
-                        <li><Link to='/catalogo'>Catálogo</Link></li>
-                        <li><a href="#contact">Login</a></li>
-                        <li><a href="#contact">Cadastre-se</a></li>
+                        Olá!<a href = '/login'>Entre</a>
+                        ou
+                        <a href='/signup'>Cadastre-se</a>
                     </ul>
                 </nav>
+                </div>
+                <div className="bottom">
+                    |<div><Link className='option' to='/catalogo'>Suplementos</Link></div>|
+                    <div><Link className='option' to='/catalogo'>Roupas</Link></div>|
+                    <div><Link className='option' to='/catalogo'>Acessórios</Link></div>|
+                </div>
             </div>
         </>
     )
