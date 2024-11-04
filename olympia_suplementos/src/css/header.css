@@ -87,3 +87,13 @@
   transform: scaleX(1);
   transform-origin: center;
 }
+
+.cart a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.right-banner{
+  display: flex;
+  flex-direction: row;
+}
