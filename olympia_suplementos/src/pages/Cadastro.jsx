@@ -8,4 +8,4 @@ const Cadastro = () => {
 
 }
 
-export { Cadastro }
+export default Cadastro
