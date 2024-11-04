@@ -19,7 +19,7 @@ const Header= () => {
                         </nav>
                         <div className="cart">
                             <Link to="/carrinho" className="cart-link">
-                            <PiShoppingCartBold />
+                            <PiShoppingCartBold size={30}/>
                             </Link>
                         </div>
                     </div>
