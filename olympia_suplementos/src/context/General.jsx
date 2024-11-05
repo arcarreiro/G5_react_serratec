@@ -4,7 +4,10 @@ const GeneralContext = createContext ({})
 
 const GeneralProvider = ({ children }) => {
 // pedido
-const [itens, setItens] = useState([])
+const [itens, setItens] = useState([[
+    { idProduto: "ac63", quantidade: 2 },
+    { idProduto: "0e4b", quantidade: 1 },
+]])
 const [valorTotal, setValorTotal]= useState(0)
 // produto
 const [produtos, setProdutos] = useState([])

@@ -10,7 +10,7 @@ const Catalogo = () => {
 
     const getAllProducts = async () => {
         try {
-            const response = await api.get('http://localhost:3000/produtos');
+            const response = await api.get('/produtos');
             setProdutos(response.data);
         } catch (error) {
             console.error("Erro ao buscar produtos:", error);
