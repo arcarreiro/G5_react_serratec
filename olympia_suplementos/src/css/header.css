@@ -24,6 +24,7 @@
   background-color: #333;
   /* Cor de fundo */
   color: #fff;
+  
 }
 
 .bottom {
@@ -37,6 +38,7 @@
   background-color: #4c4c4c;
   /* Cor de fundo */
   color: #fff;
+  margin-bottom: 20px;
 }
 
 .right-banner{
