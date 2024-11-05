@@ -20,9 +20,14 @@ const Carrinho = () => {
         p: 4,
     };
 
-    const { open, setOpen, itens, setItens } = useContext(GeneralContext)
+    const { open, setOpen, itens, setItens, produtos } = useContext(GeneralContext)
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+
+    const valorTotalPedido = itens.reduce((total, item) => {
+        const produto = produtos.find((prod) => prod.idProduto === item.idProduto);
+        return produto ? total + produto.preco * item.quantidade : total;
+    }, 0);
 
     return <>
         <div className="cart" style={{ cursor: 'pointer' }}>
@@ -38,9 +43,15 @@ const Carrinho = () => {
             <Box sx={{ ...style, width: '50vw' }}>
                 <h2 id="parent-modal-title" style={{ textAlign: 'center', color: 'black' }}><PiShoppingCartBold size={30} />  Seu Carrinho</h2>
                 <div id="parent-modal-description" style={{ backgroundColor: 'whitesmoke' }}>
-                    <ItemCarrinho idProduto="ac63" quantidade={2}/>
+                    {itens.map((item, index) => (
+                        <ItemCarrinho
+                        key={index}
+                        idProduto={item.idProduto}
+                        quantidade={item.quantidade}
+                        />
+                    ))}
                 </div>
-                <h3 style={{ marginBottom: "0.5rem" }}>Valor Total: R$ 100,00</h3>
+                <h3 style={{ marginBottom: "0.5rem" }}>Valor Total: R$ {valorTotalPedido.toFixed(2)}</h3>
                 <button>Concluir pedido</button>
             </Box>
         </Modal>
