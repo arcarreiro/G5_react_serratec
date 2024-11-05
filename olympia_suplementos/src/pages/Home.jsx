@@ -1,3 +1,5 @@
+import Carrinho from "../components/Carrinho"
+
 const Home = () => {
 return (
     <>
