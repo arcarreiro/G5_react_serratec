@@ -25,13 +25,15 @@ const ItemCarrinho = ({ idProduto, quantidade }) => {
         }
     }, [produto, quant]);
 
+    const handleRemoverDoCarrinho = (produtoId) => {
+        setItens((prevItens) => prevItens.filter(item => item.idProduto !== produtoId));
+    };
+
     const handleQuantidadeChange = (e) => {
         const novaQuantidade = e.target.value;
 
         if (novaQuantidade == 0) {
-            setItens((itensAnteriores) =>
-                itensAnteriores.filter((ia) => ia.id != idProduto)
-            );
+            handleRemoverDoCarrinho(idProduto)
             alert('O produto foi removido do seu carrinho.');
             return;
         }
