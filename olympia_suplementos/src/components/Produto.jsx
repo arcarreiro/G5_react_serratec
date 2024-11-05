@@ -1,15 +1,15 @@
 import '../css/produto.css'
-const Produto = ({ url, nome, descricao, preco, index, onComprarClick, onAdicionarCarrinhoClick }) => {
+const Produto = ({ id, url, nome, descricao, preco, categoria, estoque, onComprarClick, onAdicionarCarrinhoClick }) => {
     return (
         <>
-            <div className="card" key={index}>
+            <div className="card" key={id}>
                 <img style={{width: 200}} src={url} />
                 <p>{nome}</p>
                 <p>{descricao}</p>
                 <p>{preco.toFixed(2)}</p>
                 <div className="botoes">
-                    <button className='botao' onClick={() => { onAdicionarCarrinhoClick(index) }}>Adicionar ao carrinho</button>
-                    <button className='botao' onClick={() => { onComprarClick(index) }}>Comprar</button> 
+                    <button className='botao' onClick={() => { onAdicionarCarrinhoClick(id) }}>Adicionar ao carrinho</button>
+                    <button className='botao' onClick={() => { onComprarClick(id) }}>Comprar</button> 
                 </div>
             </div>
         </>

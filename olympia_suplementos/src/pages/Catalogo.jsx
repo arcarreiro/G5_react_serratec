@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Produto from "../components/Produto";
 import Grid from '@mui/material/Grid2';
+import Box from '@mui/material/Box';
 const Catalogo = () => {
     const [url, setUrl] = useState('')
     const [nome, setNome] = useState('')
@@ -64,20 +65,25 @@ const Catalogo = () => {
                 <button type='reset'>Limpar Formulário</button>
             </form>
 
-            <Grid container spacing={10}>
-                {produtos.map((produto, index) => (
-                    <Grid item xs={12} sm={6} md={3} key={index}>
+            <div style={{ 
+                display: 'flex',
+                flexWrap: 'wrap',
+                padding: '10px',
+                gap: '50px',
+                justifyContent: 'center'
+
+            }}>
+                 {produtos.map((produto) => (
                         <Produto
+                            key={produto.id}
                             url={produto.url}
                             nome={produto.nome}
                             descricao={produto.descricao}
                             preco={produto.preco}
-                            index={index}
                         />
-                    </Grid>
                 ))}
-            </Grid>
 
+            </div>
 
         </>
     )
