@@ -1,5 +1,4 @@
-import { Box, Button } from '@mui/material';
-import Modal from '@mui/material/Modal';
+import { Box, Button, Modal } from '@mui/material';
 import { useContext, useState } from 'react';
 import { PiShoppingCartBold } from 'react-icons/pi';
 import { GeneralContext } from '../context/General';
