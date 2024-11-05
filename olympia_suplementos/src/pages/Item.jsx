@@ -1,8 +1,8 @@
 import { useEffect, useContext, useState } from "react";
 import Itens from "../components/Itens";
-import { api } from '../api/api.js'
 import { useParams } from "react-router-dom";
 import { GeneralContext } from "../context/General";
+import { api } from "../api/api"
 
 
 const Item = () => {
@@ -12,24 +12,27 @@ const Item = () => {
 
     const getProduct = async () => {
         try {
-            const response = await api.get(`http://localhost:3000/produtos/${id}`);
+            const response = await api.get(`/produtos/${id}`);
             setProduto(response.data);
         } catch (error) {
             console.error("Erro ao buscar produto:", error);
         }
-    };
+    }
 
     useEffect(() => {
         getProduct()
     }, [id])
 
-    const handleComprarClick = () => {
-        if (produto) { 
+    const handleComprarClick = (produtoId) => {
+        let itemAdicionar = { idProduto: produtoId, quantidade: 1 }
+        if (produtoId) { 
             const isProdutoNoCarrinho = itens.some((item) => item.id === produto.id);
             if (!isProdutoNoCarrinho) {
-                setItens((prevItens) => [...prevItens, produto]);
+                setItens((prevItens) => [...prevItens, itemAdicionar]);
+                setOpen(true)
+            } else {
+                setOpen(true)
             }
-            setOpen(true);
         } else {
             console.error("Produto não encontrado.");
         }
