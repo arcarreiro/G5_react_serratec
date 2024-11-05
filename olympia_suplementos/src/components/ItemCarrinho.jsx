@@ -6,7 +6,7 @@ import { api } from '../api/api';
 const ItemCarrinho = ({ idProduto, quantidade }) => {
     const { produtos, setItens, open } = useContext(GeneralContext);
     const [produto, setProduto] = useState({})
-    
+
     // produto.id === item.id
     // const produto = produtos.find((prod) => prod.id === item.id);
 
@@ -17,12 +17,12 @@ const ItemCarrinho = ({ idProduto, quantidade }) => {
         console.log(response.data)
         setProduto(response.data)
     }
-    
+
     useEffect(() => {
         console.log('texto')
         getProduto()
     }, [idProduto])
-    
+
     const handleQuantidadeChange = (e) => {
         const novaQuantidade = Number(e.target.value);
 

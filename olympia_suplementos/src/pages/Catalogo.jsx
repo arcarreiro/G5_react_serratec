@@ -5,7 +5,7 @@ import { api } from '../api/api.js'
 import { GeneralContext } from "../context/General";
 
 const Catalogo = () => {
-    const {produtos, setProdutos, itens, setItens, setOpen} = useContext(GeneralContext)
+    const { produtos, setProdutos, itens, setItens, setOpen } = useContext(GeneralContext)
     const { categoria } = useParams();
 
     const getAllProducts = async () => {
@@ -19,28 +19,30 @@ const Catalogo = () => {
 
     useEffect(() => {
         getAllProducts()
-    },[])
+    }, [])
 
     const handleAdicionarCarrinhoClick = (produtoId) => {
-        const produto = produtos.find((item) => item.id === produtoId);
-        if (produto) {
+        let itemAdicionar = { idProduto: "produtoId", quantidade: 1 }
+        if (produtoId) {
             const isProdutoNoCarrinho = itens.some((item) => item.id === produtoId);
             if (!isProdutoNoCarrinho) {
-                setItens((prevItens) => [...prevItens, produto]);
+                setItens((prevItens) => [...prevItens, itemAdicionar]);
             } else {
-                alert('Produto já está no carrinho!'); 
+                alert('Produto já está no carrinho!');
             }
         }
     };
 
     const handleComprarClick = (produtoId) => {
-        const produto = produtos.find((item) => item.id === produtoId);
-        if (produto) {
+        let itemAdicionar = { idProduto: "produtoId", quantidade: 1 }
+        if (produtoId) {
             const isProdutoNoCarrinho = itens.some((item) => item.id === produtoId);
             if (!isProdutoNoCarrinho) {
-                setItens((prevItens) => [...prevItens, produto]);
+                setItens((prevItens) => [...prevItens, itemAdicionar]);
+                setOpen(true);
+            } else {
+                setOpen(true);
             }
-            setOpen(true);
         }
     };
 
@@ -48,8 +50,8 @@ const Catalogo = () => {
 
     return (
         <>
-            
-            <div style={{ 
+
+            <div style={{
                 display: 'flex',
                 flexWrap: 'wrap',
                 padding: '10px',
@@ -59,17 +61,17 @@ const Catalogo = () => {
 
             }}>
 
-                 {produtosFiltrados.map((produto) => (
-                        <Produto
-                            key={produto.id}
-                            id={produto.id}
-                            imgurl={produto.imgurl}
-                            nome={produto.nome}
-                            descricao={produto.descricao}
-                            preco={produto.preco}
-                            onAdicionarCarrinhoClick={handleAdicionarCarrinhoClick}
-                            onComprarClick={handleComprarClick}
-                        />
+                {produtosFiltrados.map((produto) => (
+                    <Produto
+                        key={produto.id}
+                        id={produto.id}
+                        imgurl={produto.imgurl}
+                        nome={produto.nome}
+                        descricao={produto.descricao}
+                        preco={produto.preco}
+                        onAdicionarCarrinhoClick={handleAdicionarCarrinhoClick}
+                        onComprarClick={handleComprarClick}
+                    />
                 ))}
             </div>
 
