@@ -2,6 +2,7 @@ import React from 'react'
 import '../css/header.css'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 import { PiShoppingCartBold } from "react-icons/pi";
+import Carrinho from './Carrinho';
 
 const Header= () => {
     return (
@@ -12,16 +13,15 @@ const Header= () => {
                     <div className='right-banner'>
                         <nav className="navbar">
                             <ul className="nav-links">
-                                Olá!<a href='/login'>Entre</a>
-                                ou
-                                <a href='/signup'>Cadastre-se</a>
+                                Olá!<Link style={{marginLeft:-10, marginRight:-10}} to='/login'>Entre</Link>
+                                ou <Link style={{marginLeft:-10, marginRight:-10}} to='/signup'>Cadastre-se</Link>
                             </ul>
                         </nav>
-                        <div className="cart">
-                            <Link to="/carrinho" className="cart-link">
+
+                        <Carrinho />
+                        {/* <div className="cart">
                             <PiShoppingCartBold size={30}/>
-                            </Link>
-                        </div>
+                        </div> */}
                     </div>
 
                 </div>
