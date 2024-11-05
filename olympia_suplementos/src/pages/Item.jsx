@@ -26,7 +26,7 @@ const Item = () => {
     const handleComprarClick = (produtoId) => {
         let itemAdicionar = { idProduto: produtoId, quantidade: 1 }
         if (produtoId) { 
-            const isProdutoNoCarrinho = itens.some((item) => item.id === produto.id);
+            const isProdutoNoCarrinho = itens.some((item) => item.idProduto === produtoId);
             if (!isProdutoNoCarrinho) {
                 setItens((prevItens) => [...prevItens, itemAdicionar]);
                 setOpen(true)
