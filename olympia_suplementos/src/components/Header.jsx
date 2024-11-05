@@ -26,9 +26,9 @@ const Header= () => {
 
                 </div>
                 <div className="bottom">
-                    |<div><Link className='option' to='/catalogo'>Suplementos</Link></div>|
-                    <div><Link className='option' to='/catalogo'>Roupas</Link></div>|
-                    <div><Link className='option' to='/catalogo'>Acessórios</Link></div>|
+                    |<div><Link className='option' to='/catalogo/suplementos'>Suplementos</Link></div>|
+                    <div><Link className='option' to='/catalogo/roupas'>Roupas</Link></div>|
+                    <div><Link className='option' to='/catalogo/acessorios'>Acessórios</Link></div>|
                 </div>
             </div>
         </>

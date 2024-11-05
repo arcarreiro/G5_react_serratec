@@ -15,13 +15,40 @@
   ],
   "produtos": [
     {
-      "id": "faba",
-      "nome": "Produto",
-      "imgurl": "http://",
-      "descricao": "descrição do produto",
-      "preco": 10,
-      "categoria": "alimento",
-      "estoque": 1
+      "id": "1759",
+      "nome": "Creatina",
+      "imgurl": "https://www.gsuplementos.com.br/upload/produto/layout/70/produto1-creapure250.webp",
+      "descricao": "A creatina é um nutriente classificado como 'amina', ela é fabricada por nosso organismo e também é encontrada em alguns alimentos. 95% da creatina presente em nosso organismo encontra-se nos músculos, isto porque creatina é usada pela célula muscular na formação de energia, responsável pelas contrações. Ou seja, sem creatina não há contração e a suplementação de creatina pode aumentar a força muscular.",
+      "preco": 115,
+      "categoria": "suplementos",
+      "estoque": 200
+    },
+    {
+      "id": "0e4b",
+      "nome": "L-Glutamina",
+      "imgurl": "https://www.gsuplementos.com.br/upload/produto/layout/85/l-glutamina-250g-growthsupplements-v2-b.webp",
+      "descricao": "A glutamina é classificada como aminoácido não essencial, devido a capacidade de produção por nosso organismo, ela pode ser sintetizada por pulmões, fígado, cérebro, músculos esqueléticos e tecido adiposo. Apesar disto, em algumas condições como sepse, recuperação de queimaduras ou cirurgia e desnutrição, bem como em exercícios físicos de alta intensidade, a síntese endógena pode ser incapaz de suprir a demanda orgânica e a glutamina passa, então, a ser um aminoácido condicionalmente essencial, devendo ser obtida através da alimentação ou suplementação.",
+      "preco": 54,
+      "categoria": "suplementos",
+      "estoque": 500
+    },
+    {
+      "id": "ac63",
+      "nome": "Macacão Growth Under Preto",
+      "imgurl": "https://www.gsuplementos.com.br/upload/produto/layout/2788/macacao-growth-under-preto-01.webp",
+      "descricao": "Composição: Poliamida 320 action, 92% Poliamida e 8% Elastano.",
+      "preco": 180,
+      "categoria": "roupas",
+      "estoque": 100
+    },
+    {
+      "id": "efb7",
+      "nome": "Coqueteleira Preta 600ml",
+      "imgurl": "https://www.gsuplementos.com.br/upload/produto/imagem/coqueteleira-simples-growth-supplements.png",
+      "descricao": "Prepare-se para turbinar seus treinos com a Coqueteleira Preta de 600ml! Ideal para atletas e entusiastas do fitness, esta coqueteleira combina estilo e funcionalidade, permitindo que você misture seus shakes de proteína e suplementos de forma prática e eficiente. Com um design ergonômico e tampa à prova de vazamentos, você pode levá-la para a academia, ao trabalho ou em qualquer lugar, sem preocupações. Seu tamanho de 600ml é perfeito para porções generosas, e a grade interna ajuda a obter uma mistura homogênea. Transforme sua rotina de treinos e mantenha-se hidratado com a Coqueteleira Preta — o acessório essencial para quem busca resultados!",
+      "preco": 9,
+      "categoria": "acessorios",
+      "estoque": 800
     }
   ],
   "pedidos": [

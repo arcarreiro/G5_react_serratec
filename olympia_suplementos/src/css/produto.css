@@ -8,20 +8,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: font-size 0.3s ease;
     width: 25rem;
+    transition: font-size 0.3s ease;
 }
 
 .card img {
     border-radius: 8px;
+    width: 300px;
+    height: 200px;
+    object-fit: contain;
 }
 
-.card p {
+.card p,
+h2 {
     text-align: center;
-    background-color:#4C4C4C;
     color: #e9ecef;
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .card:hover {
@@ -29,15 +32,30 @@
 }
 
 .botoes {
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: auto;
-    gap: 2rem;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .botao {
     width: 50%;
     height: 4rem;
+    transition: background-color 0.3s ease;
 }
 
+.botao:hover {
+    background-color: #333333;
+}
+
+@media (max-width: 500px) {
+
+    .card {
+        width: 20rem;
+    }
+
+    .botao {
+        font-size: 0.8rem;
+    }
+}

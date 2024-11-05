@@ -4,8 +4,7 @@ const GeneralContext = createContext ({})
 
 const GeneralProvider = ({ children }) => {
 // pedido
-const [item, setItem] = useState('')
-const [quantidade, setQuantidade]= useState(0)
+const [itens, setItens] = useState([])
 const [valorTotal, setValorTotal]= useState(0)
 // produto
 const [produtos, setProdutos] = useState([])
@@ -22,7 +21,7 @@ const [email, setEmail] = useState('')
 const [open, setOpen] = useState(false);
     return(
         <>
-        <GeneralContext.Provider value={{ item, quantidade, valorTotal, setValorTotal, setItem, setQuantidade,
+        <GeneralContext.Provider value={{ itens, valorTotal, setValorTotal, setItens,
             produtos, setProdutos, nomeProduto, imgURL, descricao, preco, categoria, estoque,
             setNomeProduto, setImgURL, setDescricao, setPreco, setCategoria, setEstoque,
             username, senha, email, setUsername, setSenha, setEmail, open, setOpen
