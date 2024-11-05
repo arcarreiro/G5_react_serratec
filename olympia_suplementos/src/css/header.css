@@ -24,7 +24,6 @@
   background-color: #333;
   /* Cor de fundo */
   color: #fff;
-  
 }
 
 .bottom {
@@ -106,4 +105,11 @@
 .cart a{
   color: #fff;
   text-decoration: none;
+}
+
+@media (max-width: 500px) {
+
+  .banner {
+    flex-direction: column;
+}
 }
