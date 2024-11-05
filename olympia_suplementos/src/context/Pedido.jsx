@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+/*import { createContext, useState } from "react";
 
 const PedidoContext = createContext ({})
 
@@ -16,4 +16,4 @@ const PedidoProvider = ({ children }) => {
     )
 }
 
-export { PedidoContext, PedidoProvider }
+export { PedidoContext, PedidoProvider } */
