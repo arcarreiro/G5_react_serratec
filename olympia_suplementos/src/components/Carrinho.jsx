@@ -1,7 +1,8 @@
 import { Box, Button } from '@mui/material';
 import Modal from '@mui/material/Modal';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { PiShoppingCartBold } from 'react-icons/pi';
+import { GeneralContext } from '../context/General';
 
 
 
@@ -19,7 +20,7 @@ const Carrinho = () => {
         p: 4,
       };
 
-    const [open, setOpen] = useState(false);
+    const {open, setOpen} = useContext(GeneralContext)
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
