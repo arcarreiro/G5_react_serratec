@@ -2,6 +2,7 @@ import { Box, Button, Modal } from '@mui/material';
 import { useContext, useState } from 'react';
 import { PiShoppingCartBold } from 'react-icons/pi';
 import { GeneralContext } from '../context/General';
+import ItemCarrinho from './ItemCarrinho';
 
 
 
@@ -19,7 +20,7 @@ const Carrinho = () => {
         p: 4,
     };
 
-    const { open, setOpen } = useContext(GeneralContext)
+    const { open, setOpen, itens, setItens } = useContext(GeneralContext)
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
@@ -34,12 +35,12 @@ const Carrinho = () => {
             aria-labelledby="parent-modal-title"
             aria-describedby="parent-modal-description"
         >
-            <Box sx={{ ...style, width: 400 }}>
-                <h2 id="parent-modal-title" style={{textAlign: 'center'}}>Seu Carrinho</h2>
-                <p id="parent-modal-description">
-                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-                </p>
-                <h3>Valor Total: R$ 100,00</h3>
+            <Box sx={{ ...style, width: '50vw' }}>
+                <h2 id="parent-modal-title" style={{ textAlign: 'center', color: 'black' }}><PiShoppingCartBold size={30} />  Seu Carrinho</h2>
+                <div id="parent-modal-description" style={{ backgroundColor: 'whitesmoke' }}>
+                    <ItemCarrinho idProduto="ac63" quantidade={2}/>
+                </div>
+                <h3 style={{ marginBottom: "0.5rem" }}>Valor Total: R$ 100,00</h3>
                 <button>Concluir pedido</button>
             </Box>
         </Modal>
