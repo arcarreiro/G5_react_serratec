@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+/* import { createContext, useState } from "react";
 
 const ProdutoContext = createContext ({})
 
@@ -19,4 +19,4 @@ const ProdutoProvider = ({ children }) => {
         </>
     )
 }
-export { ProdutoContext, ProdutoProvider }
+export { ProdutoContext, ProdutoProvider } */
