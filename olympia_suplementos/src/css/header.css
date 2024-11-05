@@ -39,6 +39,19 @@
   color: #fff;
 }
 
+.right-banner{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.cart-link {
+  height: 1.5rem
+}
+
+
 .banner-image {
   height: 5rem;
   /* Tamanho da imagem */
@@ -86,4 +99,9 @@
 .option:hover::after {
   transform: scaleX(1);
   transform-origin: center;
+}
+
+.cart a{
+  color: #fff;
+  text-decoration: none;
 }
