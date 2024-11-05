@@ -18,10 +18,10 @@
       "id": "faba",
       "nome": "Produto",
       "imgurl": "http://",
-      "descrição": "descrição do produto",
+      "descricao": "descrição do produto",
       "preco": 10,
       "categoria": "alimento",
-      "quantidade": 1
+      "estoque": 1
     }
   ],
   "pedidos": [
