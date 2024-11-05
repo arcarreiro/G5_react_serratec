@@ -1,0 +1,15 @@
+h2{
+    font-weight: 500px;
+    color: rgb(255, 255, 255);
+}
+
+.text{
+    background: rgb(58, 58, 58);
+}
+
+.home{
+    padding: 0;
+    margin-top: 4rem;
+    width: 100vw;
+    left: 0;
+}
