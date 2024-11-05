@@ -19,6 +19,7 @@ function App() {
     <>
     <BrowserRouter>
     <Header />
+    <div style={{paddingTop:'10.5rem'}}>
     <Switch>
       <Route exact path='/' component={Home}/>
       <Route exact path='/login' component={Login}/>
@@ -27,6 +28,7 @@ function App() {
       <Route exact path='/item' component={Item}/>
       <Route exact path='/pedidos' component={Pedidos}/>
     </Switch>
+    </div>
     </BrowserRouter>
 
     </>
