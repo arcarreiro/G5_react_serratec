@@ -16,23 +16,32 @@ const ItemCarrinho = ({ idProduto, quantidade }) => {
     }
 
     useEffect(() => {
-        console.log('texto')
-        getProduto()
-        setPrecoLinha(quant * (produto.preco))
-    }, [idProduto, open])
+        getProduto();
+    }, [idProduto]);
+
+    useEffect(() => {
+        if (produto.preco) {
+            setPrecoLinha(quant * produto.preco);
+        }
+    }, [produto, quant]);
 
     const handleQuantidadeChange = (e) => {
-        if (quant > 0) {
-            setQuant(e.target.value)
-            setPrecoLinha(quant * (produto.preco))
+        const novaQuantidade = e.target.value;
+
+        if (novaQuantidade == 0) {
             setItens((itensAnteriores) =>
-                itensAnteriores.map((ia) =>
-                    ia.id === idProduto ? { ...ia, quantidade: quant } : ia
-                ));
+                itensAnteriores.filter((ia) => ia.id != idProduto)
+            );
+            alert('O produto foi removido do seu carrinho.');
+            return;
         }
-        if (quant = 0){
-            alert('O produto foi removido do seu carrinho.')
-        }
+
+        setQuant(novaQuantidade);
+        setItens((itensAnteriores) =>
+            itensAnteriores.map((ia) =>
+                ia.id == idProduto ? { ...ia, quantidade: novaQuantidade } : ia
+            )
+        );
     };
 
     return (
