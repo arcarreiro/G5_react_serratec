@@ -22,7 +22,7 @@ const Catalogo = () => {
     }, [])
 
     const handleAdicionarCarrinhoClick = (produtoId) => {
-        let itemAdicionar = { idProduto: "produtoId", quantidade: 1 }
+        let itemAdicionar = { idProduto:produtoId, quantidade: 1 }
         if (produtoId) {
             const isProdutoNoCarrinho = itens.some((item) => item.id === produtoId);
             if (!isProdutoNoCarrinho) {
@@ -34,7 +34,7 @@ const Catalogo = () => {
     };
 
     const handleComprarClick = (produtoId) => {
-        let itemAdicionar = { idProduto: "produtoId", quantidade: 1 }
+        let itemAdicionar = { idProduto:produtoId, quantidade: 1 }
         if (produtoId) {
             const isProdutoNoCarrinho = itens.some((item) => item.id === produtoId);
             if (!isProdutoNoCarrinho) {
