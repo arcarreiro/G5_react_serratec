@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Produto from "../components/Produto";
-import Stack from '@mui/material/Stack';
+import Grid from '@mui/material/Grid2';
 const Catalogo = () => {
     const [url, setUrl] = useState('')
     const [nome, setNome] = useState('')
@@ -9,7 +9,7 @@ const Catalogo = () => {
     const [produtos, setProdutos] = useState([])
 
     const handleURLChange = (e) => {
-        setUrlImagem(e.target.value)
+        setUrl(e.target.value)
     }
     const handleNomeChange = (e) => {
         setNome(e.target.value)
@@ -24,16 +24,18 @@ const Catalogo = () => {
     }
 
     const handleFormReset = () => {
+        setUrl('')
         setNome('')
-        setUrlImagem('')
+        setDescricao('')
         setPreco(0)
     }
 
     const handleFormSubmit = (e) => {
         e.preventDefault()
         let produto = {
+            url,
             nome,
-            urlImagem,
+            descricao,
             preco: Number(preco),
         }
         setProdutos([...produtos, produto])
@@ -61,19 +63,21 @@ const Catalogo = () => {
                 <button type='submit'>Incluir Produto</button>
                 <button type='reset'>Limpar Formulário</button>
             </form>
-            <Stack direction='row' spacing={2}>
-                {produtos.length > 0 ?
-                    produtos.map((produto, index) => (
+
+            <Grid container spacing={10}>
+                {produtos.map((produto, index) => (
+                    <Grid item xs={12} sm={6} md={3} key={index}>
                         <Produto
-                            key={index}
                             url={produto.url}
                             nome={produto.nome}
                             descricao={produto.descricao}
                             preco={produto.preco}
                             index={index}
                         />
-                    )) : <h2>Não há produto cadastrado</h2>}
-            </Stack>
+                    </Grid>
+                ))}
+            </Grid>
+
 
         </>
     )
