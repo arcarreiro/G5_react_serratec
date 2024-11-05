@@ -54,8 +54,7 @@ const Catalogo = () => {
                 flexWrap: 'wrap',
                 padding: '10px',
                 gap: '50px',
-                justifyContent: 'center',
-                marginTop: "8rem"
+                justifyContent: 'center'
 
             }}>
 
