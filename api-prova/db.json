@@ -11,6 +11,12 @@
       "nome": "renan",
       "email": "renan@email.com",
       "senha": "654321"
+    },
+    {
+      "id": "62bd",
+      "nome": "1234",
+      "email": "awsd@casdw.com",
+      "senha": "123456"
     }
   ],
   "produtos": [
