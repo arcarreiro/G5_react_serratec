@@ -2,6 +2,7 @@ import '../css/itens.css'
 import { SlLike } from "react-icons/sl";
 import { SlDislike } from "react-icons/sl";
 const Itens = ({ id, imgurl, nome, descricao, preco, onComprarClick, onLikeClick, onDeslikeClick }) => {
+
     return (
         <>
             <div className='cardItem'>

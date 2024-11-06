@@ -37,7 +37,7 @@ const Item = () => {
             console.error("Produto não encontrado.");
         }
     }
-
+    
     const handleLikeClick = async (produtoId) => {
         try {
             const novoNumeroDeLikes = produto.likes + 1;
@@ -49,7 +49,7 @@ const Item = () => {
                 ...prevProduto,
                 likes: novoNumeroDeLikes  
             }))
-    
+            alert('Obrigado pela sua avaliação!')
             console.log("Produto atualizado com sucesso:", response.data);
         } catch (error) {
             console.error("Erro ao atualizar o produto:", error);
@@ -67,7 +67,7 @@ const Item = () => {
                 ...prevProduto,
                 Deslikes: novoNumeroDeDeslikes 
             }))
-    
+            alert('Obrigado pela sua avaliação!')
             console.log("Produto atualizado com sucesso:", response.data);
         } catch (error) {
             console.error("Erro ao atualizar o produto:", error);
