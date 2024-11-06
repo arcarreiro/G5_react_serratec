@@ -16,7 +16,7 @@ import { GeneralContext } from './context/General'
 
 
 function App() {
- const { setProdutos } = useContext(GeneralContext)
+const { setProdutos } = useContext(GeneralContext)
   const getAllProducts = async () => {
     try {
       const response = await api.get('http://localhost:3000/produtos');
