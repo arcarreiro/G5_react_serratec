@@ -46,11 +46,22 @@ const Carrinho = () => {
 
     const atualizarEstoque = async () => {
         for (const item of itens) {
-            const response = api.patch(`/produtos/${id}`, { estoque: (estoque - item.quantidade) })
+            const response = api.patch(`/produtos/${item.idProduto}`, { estoque: (estoque - item.quantidade) })
+        }
+    }
+
+    const verificarEstoque = async () => {
+        for (const item of itens) {
+            const response = await api.get(`/produtos/${item.idProduto}`)
+            const prod = response.data[0]
+            if (item.quantidade > prod.estoque){
+                alert("Quantidade insuficiente em estoque! \nRestam apenas " + prod.estoque + " unidades.")
+            }
         }
     }
 
     const handleConcluirPedido = async () => {
+        verificarEstoque()
         if (user && user.id) {
             const pedido = {
                 idUser: user.id,
