@@ -78,4 +78,7 @@
         width: 15rem;
     }
 
+    .botoes {
+        flex-direction: column;
+    }
 }
