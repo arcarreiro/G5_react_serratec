@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import { api } from "../api/api"
 import { GeneralContext } from "../context/General"
 import LinhaPedido from "../components/LinhaPedido"
+import "../css/pedido.css"
 
 const Pedidos = () => {
     const { user } = useContext(GeneralContext)
@@ -9,33 +10,30 @@ const Pedidos = () => {
     const [loading, setLoading] = useState(true);
 
     const buscarPedidos = async () => {
-        console.log(user.id)
         try {
-            const response = await api.get('/pedidos');
-            const arrayPedidos = response.data;
-            console.log(arrayPedidos);
-            const pedidosUsuario = arrayPedidos.filter(pedido => pedido.idUser === user.id);
-            console.log(pedidosUsuario);
-            setPedidos(pedidosUsuario);
+            const response = await api.get('/pedidos', {
+                params: {
+                    idUser: user.id
+                }
+            });
+            setPedidos(response.data);
+            setLoading(false)
         } catch (error) {
             console.error("Erro ao buscar os pedidos:", error);
         }
     }
 
     useEffect(() => {
-        if (user.id) {
-            buscarPedidos();
-        }
-    }, [user.id]);
+        buscarPedidos();
+    }, []);
 
     if (loading) {
-        return <div>Carregando pedidos...</div>;  // Exibe uma mensagem de carregamento
+        return <div>Carregando pedidos...</div>;
     }
 
     return (
         <>
-            <div>
-                { }
+            <div className='accordion'>
                 {pedidos.map((pedido) => (
                     <LinhaPedido
                         key={pedido.id}

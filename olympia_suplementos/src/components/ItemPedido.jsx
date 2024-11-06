@@ -1,3 +1,6 @@
+import { useEffect, useState } from "react";
+import { api } from "../api/api";
+
 const ItemPedido = ({ idProduto, quantidade }) => {
     const [produto, setProduto] = useState({})
 

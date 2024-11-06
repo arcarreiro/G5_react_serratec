@@ -2,8 +2,11 @@ import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material"
 import { GeneralContext } from "../context/General"
 import { api } from "../api/api"
 import ItemCarrinho from "./ItemCarrinho"
+import ItemPedido from "./ItemPedido"
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import '../css/pedido.css'
 
-const LinhaPedido = (id, valTotal, itens) => {
+const LinhaPedido = ({ id, valTotal, itens }) => {
 
     const encontrarProduto = async () => {
         const response = await api.get(`/produtos/${item.idProduto}`)
@@ -13,8 +16,7 @@ const LinhaPedido = (id, valTotal, itens) => {
 
     return (
         <>
-
-            <Accordion>
+            <Accordion >
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1-content"
@@ -22,15 +24,16 @@ const LinhaPedido = (id, valTotal, itens) => {
                 >
                     <h2>Pedido #{id}</h2>
                 </AccordionSummary>
-                <AccordionDetails>
-                {itens.map((item) => (
+                <AccordionDetails className='accordion-details'>
+                    {itens.map((item) => (
                         <ItemPedido
-                        idProduto={item.idProduto}
-                        quantidade={item.quantidade}
+                            key={item.idProduto}
+                            idProduto={item.idProduto}
+                            quantidade={item.quantidade}
                         />
                     ))}
                     <br />
-                    <span>Valor total do pedido: R$ {valTotal.toFixed(2)}</span>
+                    <h3>Valor total do pedido: R$ {valTotal.toFixed(2)}</h3>
                 </AccordionDetails>
             </Accordion>
 
