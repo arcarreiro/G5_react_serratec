@@ -1,4 +1,4 @@
-h2{
+/* h2{
     font-weight: 500px;
     color: rgb(255, 255, 255);
 }
@@ -12,4 +12,76 @@ h2{
     margin-top: 4rem;
     width: 100vw;
     left: 0;
+} */
+
+.cardHome {
+    background-color: #4C4C4C;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: #212529 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25rem;
+    transition: font-size 0.3s ease;
+    cursor: pointer;
+}
+
+.cardHome h3 {
+    text-align: center;
+    color: #e9ecef;
+    width: 100%;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+}
+
+.cardHome h3:hover {
+    color: #333333;
+}
+
+.cardHome img {
+    border-radius: 8px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.cardHome img:hover {
+    transform: scale(1.1);
+}
+
+.cardHomeDois {
+    background-color: #4C4C4C;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: #212529 0px 5px 15px;
+    width: 86rem;
+    transition: font-size 0.3s ease;
+    cursor: pointer;
+}
+
+.cardHomeDois img {
+    border-radius: 8px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.cardHomeDois img:hover {
+    transform: scale(1.1);
+}
+
+.cardHomeDois h3 {
+    text-align: center;
+    color: #e9ecef;
+    width: 100%;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+}
+
+.cardHomeDois h3:hover {
+    color: #333333;
+}
+
+.text {
+    width: 100%;
 }
