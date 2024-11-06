@@ -47,14 +47,11 @@ const Carrinho = () => {
 
     const atualizarEstoque = async () => {
         for (const item of itens) {
-            // Buscar o estoque atual do produto
             const response = await api.get(`/produtos/${item.idProduto}`);
             const produto = response.data;
 
-            // Calcular o novo estoque
             const novoEstoque = produto.estoque - item.quantidade;
 
-            // Atualizar o estoque do produto
             await api.patch(`/produtos/${item.idProduto}`, { estoque: novoEstoque });
         }
     };
@@ -111,7 +108,6 @@ const Carrinho = () => {
         <div className="cart" style={{ cursor: 'pointer' }}>
             <PiShoppingCartBold onClick={handleOpen} size={30} />
         </div>
-        {/* <Button onClick={handleOpen}>Open modal</Button> */}
         <Modal
             open={open}
             onClose={handleClose}

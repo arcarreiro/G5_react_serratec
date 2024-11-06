@@ -29,6 +29,12 @@
       "nome": "Ana",
       "email": "ana@email.com",
       "senha": "123456"
+    },
+    {
+      "id": "272f",
+      "nome": "Gabriel",
+      "email": "gabriel@email.com",
+      "senha": "123456"
     }
   ],
   "produtos": [
@@ -39,7 +45,7 @@
       "descricao": "A creatina é um nutriente classificado como 'amina', ela é fabricada por nosso organismo e também é encontrada em alguns alimentos. 95% da creatina presente em nosso organismo encontra-se nos músculos, isto porque creatina é usada pela célula muscular na formação de energia, responsável pelas contrações. Ou seja, sem creatina não há contração e a suplementação de creatina pode aumentar a força muscular.",
       "preco": 115,
       "categoria": "suplementos",
-      "estoque": 199,
+      "estoque": 198,
       "likes": 0,
       "deslikes": 0
     },
@@ -50,8 +56,8 @@
       "descricao": "A glutamina é classificada como aminoácido não essencial, devido a capacidade de produção por nosso organismo, ela pode ser sintetizada por pulmões, fígado, cérebro, músculos esqueléticos e tecido adiposo. Apesar disto, em algumas condições como sepse, recuperação de queimaduras ou cirurgia e desnutrição, bem como em exercícios físicos de alta intensidade, a síntese endógena pode ser incapaz de suprir a demanda orgânica e a glutamina passa, então, a ser um aminoácido condicionalmente essencial, devendo ser obtida através da alimentação ou suplementação.",
       "preco": 54,
       "categoria": "suplementos",
-      "estoque": 500,
-      "likes": 2,
+      "estoque": 499,
+      "likes": 0,
       "deslikes": 0
     },
     {
@@ -83,7 +89,7 @@
       "descricao": "A beta-alanine, ou β-alanina, é um aminoácido não essencial, sendo o único do tipo beta produzido naturalmente pelo nosso organismo. Ele pode ser ingerido por meio de alguns alimentos, especialmente os de origem animal, fontes de proteínas, como: carne bovina, frango e peru. O suplemento beta-alanine pode ser consumido por iniciantes, intermediários e avançados.",
       "preco": 70,
       "categoria": "suplementos",
-      "estoque": 150,
+      "estoque": 127,
       "likes": 0,
       "deslikes": 0
     },
@@ -94,7 +100,7 @@
       "descricao": "Arginina em pó é o suplemento ideal para quem busca resultados ainda mais eficazes nos treinos e precisa de maior suporte nutricional. Auxiliando atletas a alcançar a hipertrofia, redução de gorduras ou aumento do desempenho desejado, o Arginine Powder contribui com o aumento do calibre dos vasos sanguíneos, proporcionando mais oxigênio e nutrientes aos músculos e consequentemente, contribuindo para o desenvolvimento de massa.",
       "preco": 61,
       "categoria": "suplementos",
-      "estoque": 20,
+      "estoque": 0,
       "likes": 0,
       "deslikes": 0
     },
@@ -183,8 +189,8 @@
       "preco": 39,
       "categoria": "acessorios",
       "estoque": 250,
-      "likes": 0,
-      "deslikes": 0
+      "likes": 1,
+      "deslikes": 1
     },
     {
       "id": "3750",
@@ -343,6 +349,47 @@
         },
         {
           "idProduto": "0ae3",
+          "quantidade": 1
+        }
+      ]
+    },
+    {
+      "id": "7320",
+      "idUser": "272f",
+      "valorTotal": 1540,
+      "itens": [
+        {
+          "idProduto": "87ab",
+          "quantidade": "22"
+        }
+      ]
+    },
+    {
+      "id": "6525",
+      "idUser": "272f",
+      "valorTotal": 1220,
+      "itens": [
+        {
+          "idProduto": "f7e3",
+          "quantidade": "20"
+        }
+      ]
+    },
+    {
+      "id": "1f36",
+      "idUser": "272f",
+      "valorTotal": 239,
+      "itens": [
+        {
+          "idProduto": "1759",
+          "quantidade": 1
+        },
+        {
+          "idProduto": "0e4b",
+          "quantidade": 1
+        },
+        {
+          "idProduto": "87ab",
           "quantidade": 1
         }
       ]
