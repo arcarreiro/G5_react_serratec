@@ -3,13 +3,14 @@ import '../css/login.css';
 import {CiUser, CiLock} from 'react-icons/ci';
 import { GeneralContext } from "../context/General";
 import { api } from "../api/api";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const Login = () =>{
     
     const {user, setUser} = useContext(GeneralContext)
     const [mail, setMail] = useState('')
     const [pass, setPass] = useState('')
+    const history = useHistory()
 
     const handleChangeMail = (e) => {
         setMail(e.target.value)
@@ -28,6 +29,7 @@ const Login = () =>{
             if (response.data.length > 0){
             setUser(response.data[0])
             console.log(user)
+            history.push('/')
             } else {
                 alert('Usuario e/ou senha incorretos.')
             }

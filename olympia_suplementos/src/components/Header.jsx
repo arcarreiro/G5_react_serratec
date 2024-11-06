@@ -5,7 +5,11 @@ import Carrinho from './Carrinho';
 import { GeneralContext } from '../context/General';
 
 const Header = () => {
-    const { user } = useContext(GeneralContext)
+    const { user, setUser } = useContext(GeneralContext)
+
+    const handleLogoff = () => {
+        setUser({})
+    }
 
     return (
         <>
@@ -16,8 +20,8 @@ const Header = () => {
                         {user && user.nome ?
                         <p>
                         Olá, {user.nome}! <br />
-                        Veja seu Histórico de Pedidos<br />
-                        Ou clique aqui para sair
+                        Veja seu <Link to='/pedidos'>Histórico de Pedidos</Link><br />
+                        Ou <Link onClick={handleLogoff} to='/'>clique aqui para sair</Link>
                     </p>
                     : <p>Olá! <Link to='/login'>Entre</Link><br />ou <Link to='/signup'>Cadastre-se</Link></p>
                         }
