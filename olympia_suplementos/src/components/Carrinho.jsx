@@ -44,24 +44,28 @@ const Carrinho = () => {
         handleValorTotal();
     }, [itens])
 
+
     const atualizarEstoque = async () => {
         for (const item of itens) {
-            const response = api.patch(`/produtos/${item.idProduto}`, { estoque: (estoque - item.quantidade) })
-        }
-    }
+            // Buscar o estoque atual do produto
+            const response = await api.get(`/produtos/${item.idProduto}`);
+            const produto = response.data;
 
-    const verificarEstoque = async () => {
-        for (const item of itens) {
-            const response = await api.get(`/produtos/${item.idProduto}`)
-            const prod = response.data[0]
-            if (item.quantidade > prod.estoque){
-                alert("Quantidade insuficiente em estoque! \nRestam apenas " + prod.estoque + " unidades.")
-            }
+            // Calcular o novo estoque
+            const novoEstoque = produto.estoque - item.quantidade;
+
+            // Atualizar o estoque do produto
+            await api.patch(`/produtos/${item.idProduto}`, { estoque: novoEstoque });
         }
-    }
+    };
 
     const handleConcluirPedido = async () => {
-        verificarEstoque()
+        const estoqueSuficiente = await verificarEstoque()
+
+        if (!estoqueSuficiente) {
+            alert("Não foi possível concluir o pedido pois o estoque é insuficiente.")
+            return
+        }
         if (user && user.id) {
             const pedido = {
                 idUser: user.id,
@@ -69,9 +73,10 @@ const Carrinho = () => {
                 itens: itens
             }
             try {
-                const response = api.post('/pedidos', pedido)
+                const response = await api.post('/pedidos', pedido)
                 alert("Pedido concluído com sucesso!")
-                history.push('/pedidos')
+                history.push('/')
+                setOpen(false)
                 atualizarEstoque()
                 setItens([])
             } catch {
@@ -81,6 +86,20 @@ const Carrinho = () => {
             alert("Antes de concluir o pedido, faça login!")
             setOpen(false)
             history.push('/login')
+        }
+
+    }
+
+    const verificarEstoque = async () => {
+        for (const item of itens) {
+            const response = await api.get(`/produtos/${item.idProduto}`)
+            const prod = response.data
+            if (item.quantidade > prod.estoque) {
+                alert("Quantidade insuficiente em estoque! \nRestam apenas " + prod.estoque + " unidades do produto " + prod.nome)
+                return false
+            } else {
+                return true
+            }
         }
     }
 
@@ -112,7 +131,7 @@ const Carrinho = () => {
                 </div>
                 {console.log(itens[0])}
                 <h3 style={{ marginBottom: "0.5rem", textAlign: 'right' }}>Valor Total: R$ {valorTotal.toFixed(2)}</h3>
-                <div style={{display: 'flex', justifyContent: 'center', gap: '1rem'}}>
+                <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem' }}>
                     <button onClick={handleConcluirPedido}>Concluir pedido</button>
                     <button onClick={handleEsvaziarCarrinhoClick}>Esvaziar o carrinho</button>
                 </div>

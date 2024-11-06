@@ -3,6 +3,7 @@ import { api } from "../api/api"
 import { GeneralContext } from "../context/General"
 import LinhaPedido from "../components/LinhaPedido"
 import "../css/pedido.css"
+import { BsEmojiTear } from "react-icons/bs"
 
 const Pedidos = () => {
     const { user } = useContext(GeneralContext)
@@ -34,15 +35,16 @@ const Pedidos = () => {
     return (
         <>
             <div className='accordion'>
-                {pedidos.map((pedido) => (
+                {pedidos.length > 0 ?
+                (pedidos.map((pedido) => (
                     <LinhaPedido
-                        key={pedido.id}
-                        id={pedido.id}
-                        valTotal={pedido.valorTotal}
-                        itens={pedido.itens}
+                    key={pedido.id}
+                    id={pedido.id}
+                    valTotal={pedido.valorTotal}
+                    itens={pedido.itens}
                     />
-                )
-                )}
+                ))
+            ) : <h1 style={{color: '#333333'}}>Você ainda não fez nenhum pedido... <BsEmojiTear /></h1>}
             </div>
         </>
     )

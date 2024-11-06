@@ -38,22 +38,24 @@ const ItemCarrinho = ({ idProduto, quantidade }) => {
         }
 
         setQuant(novaQuantidade);
-        setItens(itens.map((item) => produto.id != item.idProduto ? item : {...item, quantidade: novaQuantidade}))
+        setItens(itens.map((item) => produto.id != item.idProduto ? item : { ...item, quantidade: novaQuantidade }))
     };
 
     return (
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
             <span>{produto.nome}</span>
+            <div style={{display: 'flex', justifyContent: 'space-between', marginRight: '10px', width: '12rem'}}>
 
-            <input
-                type="number"
-                value={quant}
-                onChange={handleQuantidadeChange}
-                style={{ width: '50px', textAlign: 'center', margin: '0 10px' }}
-            />
+                <input
+                    type="number"
+                    value={quant}
+                    onChange={handleQuantidadeChange}
+                    style={{ width: '50px', textAlign: 'center', margin: '0 10px' }}
+                />
 
-            {/* Preço total justificado à direita */}
-            <span style={{ fontWeight: 'bold' }}>R$ {(precoLinha).toFixed(2)}</span>
+                {/* Preço total justificado à direita */}
+                <span style={{ fontWeight: 'bold' }}>R$ {(precoLinha).toFixed(2)}</span>
+            </div>
         </div>
     );
 };

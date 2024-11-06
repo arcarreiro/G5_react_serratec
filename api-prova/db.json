@@ -17,6 +17,18 @@
       "nome": "1234",
       "email": "awsd@casdw.com",
       "senha": "123456"
+    },
+    {
+      "id": "1890",
+      "nome": "Arthur",
+      "email": "arthur@email.com",
+      "senha": "123456"
+    },
+    {
+      "id": "c28c",
+      "nome": "Ana",
+      "email": "ana@email.com",
+      "senha": "123456"
     }
   ],
   "produtos": [
@@ -27,7 +39,7 @@
       "descricao": "A creatina é um nutriente classificado como 'amina', ela é fabricada por nosso organismo e também é encontrada em alguns alimentos. 95% da creatina presente em nosso organismo encontra-se nos músculos, isto porque creatina é usada pela célula muscular na formação de energia, responsável pelas contrações. Ou seja, sem creatina não há contração e a suplementação de creatina pode aumentar a força muscular.",
       "preco": 115,
       "categoria": "suplementos",
-      "estoque": 200,
+      "estoque": 199,
       "likes": 0,
       "deslikes": 0
     },
@@ -82,7 +94,7 @@
       "descricao": "Arginina em pó é o suplemento ideal para quem busca resultados ainda mais eficazes nos treinos e precisa de maior suporte nutricional. Auxiliando atletas a alcançar a hipertrofia, redução de gorduras ou aumento do desempenho desejado, o Arginine Powder contribui com o aumento do calibre dos vasos sanguíneos, proporcionando mais oxigênio e nutrientes aos músculos e consequentemente, contribuindo para o desenvolvimento de massa.",
       "preco": 61,
       "categoria": "suplementos",
-      "estoque": 60,
+      "estoque": 20,
       "likes": 0,
       "deslikes": 0
     },
@@ -137,7 +149,7 @@
       "descricao": "Composição Camiseta manga longa térmica com proteção uv+50: % Poliamida, 12% Elastano.",
       "preco": 130,
       "categoria": "roupas",
-      "estoque": 325,
+      "estoque": 324,
       "likes": 0,
       "deslikes": 0
     },
@@ -148,7 +160,7 @@
       "descricao": "Composição: 85% Algodão, 10% Poliéster, 5% Elastano.",
       "preco": 115,
       "categoria": "roupas",
-      "estoque": 231,
+      "estoque": 230,
       "likes": 0,
       "deslikes": 0
     },
@@ -253,6 +265,84 @@
       "itens": [
         {
           "idProduto": "efb7",
+          "quantidade": 1
+        }
+      ]
+    },
+    {
+      "id": "065a",
+      "idUser": "1890",
+      "valorTotal": 214,
+      "itens": [
+        {
+          "idProduto": "1759",
+          "quantidade": 1
+        },
+        {
+          "idProduto": "942c",
+          "quantidade": 1
+        },
+        {
+          "idProduto": "5c45",
+          "quantidade": 1
+        }
+      ]
+    },
+    {
+      "id": "6b43",
+      "idUser": "1890",
+      "valorTotal": 115,
+      "itens": [
+        {
+          "idProduto": "1759",
+          "quantidade": 1
+        }
+      ]
+    },
+    {
+      "id": "48ca",
+      "idUser": "1890",
+      "valorTotal": 3721,
+      "itens": [
+        {
+          "idProduto": "f7e3",
+          "quantidade": "61"
+        }
+      ]
+    },
+    {
+      "id": "51cc",
+      "idUser": "1890",
+      "valorTotal": 671,
+      "itens": [
+        {
+          "idProduto": "f7e3",
+          "quantidade": "11"
+        }
+      ]
+    },
+    {
+      "id": "4810",
+      "idUser": "1890",
+      "valorTotal": 122,
+      "itens": [
+        {
+          "idProduto": "f7e3",
+          "quantidade": "2"
+        }
+      ]
+    },
+    {
+      "id": "3357",
+      "idUser": "1890",
+      "valorTotal": 245,
+      "itens": [
+        {
+          "idProduto": "bdab",
+          "quantidade": 1
+        },
+        {
+          "idProduto": "0ae3",
           "quantidade": 1
         }
       ]
