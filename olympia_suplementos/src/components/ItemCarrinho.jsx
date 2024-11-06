@@ -4,14 +4,13 @@ import { api } from '../api/api';
 
 
 const ItemCarrinho = ({ idProduto, quantidade }) => {
-    const { produtos, setItens, open } = useContext(GeneralContext);
+    const { produtos, itens, setItens, open } = useContext(GeneralContext);
     const [produto, setProduto] = useState({})
     const [quant, setQuant] = useState(quantidade)
     const [precoLinha, setPrecoLinha] = useState(0)
 
     const getProduto = async () => {
         const response = await api.get(`/produtos/${idProduto}`)
-        console.log(response.data)
         setProduto(response.data)
     }
 
@@ -39,11 +38,7 @@ const ItemCarrinho = ({ idProduto, quantidade }) => {
         }
 
         setQuant(novaQuantidade);
-        setItens((itensAnteriores) =>
-            itensAnteriores.map((ia) =>
-                ia.id == idProduto ? { ...ia, quantidade: novaQuantidade } : ia
-            )
-        );
+        setItens(itens.map((item) => produto.id != item.idProduto ? item : {...item, quantidade: novaQuantidade}))
     };
 
     return (

@@ -1,8 +1,10 @@
 import { Box, Button, Modal } from '@mui/material';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { PiShoppingCartBold } from 'react-icons/pi';
 import { GeneralContext } from '../context/General';
 import ItemCarrinho from './ItemCarrinho';
+import { api } from '../api/api';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 
 
@@ -20,14 +22,48 @@ const Carrinho = () => {
         p: 4,
     };
 
-    const { open, setOpen, itens, setItens, produtos } = useContext(GeneralContext)
+    const { open, setOpen, itens, setItens, produtos, valorTotal, setValorTotal, user } = useContext(GeneralContext)
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+    const history = useHistory()
 
-    const valorTotalPedido = itens.reduce((total, item) => {
-        const produto = produtos.find((prod) => prod.idProduto === item.idProduto);
-        return produto ? total + produto.preco * item.quantidade : total;
-    }, 0);
+    const handleValorTotal = async () => {
+        let total = 0;
+
+        for (const item of itens) {
+            const response = await api.get(`/produtos/${item.idProduto}`);
+            const produto = response.data;
+            const valMultiplicado = produto.preco * item.quantidade;
+            total += valMultiplicado;
+        }
+
+        setValorTotal(total)
+    };
+
+    useEffect(() => {
+        handleValorTotal();
+    }, [itens])
+
+    const handleConcluirPedido = async () => {
+        if (user && user.id) {
+            const pedido = {
+                idUser: user.id,
+                valorTotal: valorTotal,
+                itens: itens
+            }
+            try {
+                const response = api.post('/pedidos', pedido)
+                alert("Pedido concluído com sucesso! Verifique em seu histórico de pedidos.")
+                setItens([])
+            } catch {
+                alert("Não foi possível acessar a API.")
+            }
+        } else {
+            alert("Antes de concluir o pedido, faça login!")
+            setOpen(false)
+            history.push('/login')
+        }
+    }
 
     return <>
         <div className="cart" style={{ cursor: 'pointer' }}>
@@ -45,14 +81,15 @@ const Carrinho = () => {
                 <div id="parent-modal-description" style={{ backgroundColor: 'whitesmoke' }}>
                     {itens.map((item, index) => (
                         <ItemCarrinho
-                        key={index}
-                        idProduto={item.idProduto}
-                        quantidade={item.quantidade}
+                            key={index}
+                            idProduto={item.idProduto}
+                            quantidade={item.quantidade}
                         />
                     ))}
                 </div>
-                <h3 style={{ marginBottom: "0.5rem" }}>Valor Total: R$ {valorTotalPedido.toFixed(2)}</h3>
-                <button>Concluir pedido</button>
+                {console.log(itens[0])}
+                <h3 style={{ marginBottom: "0.5rem" }}>Valor Total: R$ {valorTotal.toFixed(2)}</h3>
+                <button onClick={handleConcluirPedido}>Concluir pedido</button>
             </Box>
         </Modal>
     </>

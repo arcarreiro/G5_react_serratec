@@ -68,6 +68,32 @@
           "quantidade": 2
         }
       ]
+    },
+    {
+      "id": "df21",
+      "idUser": "bfc1",
+      "valorTotal": 169,
+      "itens": [
+        {
+          "idProduto": "1759",
+          "quantidade": 1
+        },
+        {
+          "idProduto": "0e4b",
+          "quantidade": 1
+        }
+      ]
+    },
+    {
+      "id": "0d2e",
+      "idUser": "bfc1",
+      "valorTotal": 9,
+      "itens": [
+        {
+          "idProduto": "efb7",
+          "quantidade": 1
+        }
+      ]
     }
   ]
 }
