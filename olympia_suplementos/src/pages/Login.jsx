@@ -54,7 +54,7 @@ const Login = () =>{
             <br />
             <br />
             <p>
-                Ainda não tem uma conta? <Link to = '/signup'><b>Cadastre-se!</b></Link>
+                Ainda não tem uma conta? <Link className='link' to = '/signup'><b>Cadastre-se!</b></Link>
             </p>
         </form>
         </div>

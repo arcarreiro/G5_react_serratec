@@ -52,7 +52,7 @@ const handleFormSubmit = async (e) => {
             <br />
             <br />
             <p>
-                Já possui uma conta? <Link to = '/login'><b>Faça Login!</b></Link>
+                Já possui uma conta? <Link className='link' to = '/login'><b>Faça Login!</b></Link>
             </p>
         </form>
         </div>
