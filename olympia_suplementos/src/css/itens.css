@@ -47,6 +47,19 @@
     font-size: 3rem;
 }
 
+.avaliacao {
+    padding: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgba(76, 76, 76, 0.5);
+    color:whitesmoke
+}
+
 @media (max-width: 1024px) {
 
     .cardItem {

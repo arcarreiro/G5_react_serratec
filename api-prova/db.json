@@ -22,29 +22,29 @@
   "produtos": [
     {
       "id": "1759",
-      "nome": "Creatina",
+      "nome": "Creatina em Pó 250g",
       "imgurl": "https://www.gsuplementos.com.br/upload/produto/layout/70/produto1-creapure250.webp",
       "descricao": "A creatina é um nutriente classificado como 'amina', ela é fabricada por nosso organismo e também é encontrada em alguns alimentos. 95% da creatina presente em nosso organismo encontra-se nos músculos, isto porque creatina é usada pela célula muscular na formação de energia, responsável pelas contrações. Ou seja, sem creatina não há contração e a suplementação de creatina pode aumentar a força muscular.",
       "preco": 115,
       "categoria": "suplementos",
       "estoque": 200,
-      "likes": 4,
-      "deslikes": 2
+      "likes": 0,
+      "deslikes": 0
     },
     {
       "id": "0e4b",
-      "nome": "L-Glutamina",
+      "nome": "L-Glutamina em pó 250g",
       "imgurl": "https://www.gsuplementos.com.br/upload/produto/layout/85/l-glutamina-250g-growthsupplements-v2-b.webp",
       "descricao": "A glutamina é classificada como aminoácido não essencial, devido a capacidade de produção por nosso organismo, ela pode ser sintetizada por pulmões, fígado, cérebro, músculos esqueléticos e tecido adiposo. Apesar disto, em algumas condições como sepse, recuperação de queimaduras ou cirurgia e desnutrição, bem como em exercícios físicos de alta intensidade, a síntese endógena pode ser incapaz de suprir a demanda orgânica e a glutamina passa, então, a ser um aminoácido condicionalmente essencial, devendo ser obtida através da alimentação ou suplementação.",
       "preco": 54,
       "categoria": "suplementos",
       "estoque": 500,
-      "likes": 0,
+      "likes": 2,
       "deslikes": 0
     },
     {
       "id": "ac63",
-      "nome": "Macacão Growth Under Preto",
+      "nome": "Macacão Preto",
       "imgurl": "https://www.gsuplementos.com.br/upload/produto/layout/2788/macacao-growth-under-preto-01.webp",
       "descricao": "Composição: Poliamida 320 action, 92% Poliamida e 8% Elastano.",
       "preco": 180,
@@ -61,6 +61,72 @@
       "preco": 9,
       "categoria": "acessorios",
       "estoque": 800,
+      "likes": 0,
+      "deslikes": 0
+    },
+    {
+      "id": "87ab",
+      "nome": "Beta-Alanina em Pó 250g",
+      "imgurl": "https://www.gsuplementos.com.br/upload/produto/layout/1205/beta-alanina-em-po-growth-supplements-v2.webp",
+      "descricao": "A beta-alanine, ou β-alanina, é um aminoácido não essencial, sendo o único do tipo beta produzido naturalmente pelo nosso organismo. Ele pode ser ingerido por meio de alguns alimentos, especialmente os de origem animal, fontes de proteínas, como: carne bovina, frango e peru. O suplemento beta-alanine pode ser consumido por iniciantes, intermediários e avançados.",
+      "preco": 70,
+      "categoria": "suplementos",
+      "estoque": 150,
+      "likes": 0,
+      "deslikes": 0
+    },
+    {
+      "id": "f7e3",
+      "nome": "Arginina em Pó 250g",
+      "imgurl": "https://www.gsuplementos.com.br/upload/produto/layout/1124/arginine-powder-250g-growth-supplements.webp",
+      "descricao": "Arginina em pó é o suplemento ideal para quem busca resultados ainda mais eficazes nos treinos e precisa de maior suporte nutricional. Auxiliando atletas a alcançar a hipertrofia, redução de gorduras ou aumento do desempenho desejado, o Arginine Powder contribui com o aumento do calibre dos vasos sanguíneos, proporcionando mais oxigênio e nutrientes aos músculos e consequentemente, contribuindo para o desenvolvimento de massa.",
+      "preco": 61,
+      "categoria": "suplementos",
+      "estoque": 60,
+      "likes": 0,
+      "deslikes": 0
+    },
+    {
+      "id": "3006",
+      "nome": "BCAA (10:1:1) em Pó 200g",
+      "imgurl": "https://www.gsuplementos.com.br/upload/produto/layout/13/bcaa-10-1-1-growth-supplements-v2.webp",
+      "descricao": "Um dos suplementos líderes em vendas, o BCAA é a opção perfeita para quem deseja evolução nos treinos, como o ganho de massa muscular. Isso acontece porque seu consumo estimula uma melhora importante no metabolismo de quem está buscando mudanças no físico.A combinação de aminoácidos tem uma proporção que privilegia o nutriente mais anabólico, a Leucina. Ou seja, é um suplemento de BCAA que pode trazer resultados ainda melhores para quem busca desafiar-se todos os dias.",
+      "preco": 56,
+      "categoria": "suplementos",
+      "estoque": 95,
+      "likes": 0,
+      "deslikes": 0
+    },
+    {
+      "id": "8580",
+      "nome": "Amino Powder 10 - 200g ",
+      "imgurl": "https://www.gsuplementos.com.br/upload/produto/layout/1021/amino-powder-10-250g-growth-supplements-v2.webp",
+      "descricao": "Amino Powder é o suplemento de aminoácidos essenciais mais completo que você vai ver! O Amino Powder é perfeito para completar a dieta de idosos que não conseguem comer carne, por exemplo, e crianças com restrição na alimentação, além dos praticantes de atividade física. Muitas vezes, as dietas, por melhores que sejam, ainda precisam de complementos.",
+      "preco": 68,
+      "categoria": "suplementos",
+      "estoque": 200,
+      "likes": 0,
+      "deslikes": 0
+    },
+    {
+      "id": "8e1b",
+      "nome": "Body Verde Militar",
+      "imgurl": "https://www.gsuplementos.com.br/upload/produto/layout/2780/body-growth-manuscrito-verde-militar-01.webp",
+      "descricao": "Composição: Poliamida 290 shape plus rosa maria, Poliester 190 candy light liso, 84% Poliamida, 16% Elastano. Forro: 88% Poliester, 12% Elastano.",
+      "preco": 115,
+      "categoria": "roupas",
+      "estoque": 200,
+      "likes": 0,
+      "deslikes": 0
+    },
+    {
+      "id": "a13d",
+      "nome": "Legging Preta",
+      "imgurl": "https://www.gsuplementos.com.br/upload/produto/layout/2776/legging-growth-hand-preto-01.webp",
+      "descricao": "Composição: 90% Poliamida, 10% Elastano.",
+      "preco": 160,
+      "categoria": "roupas",
+      "estoque": 235,
       "likes": 0,
       "deslikes": 0
     }

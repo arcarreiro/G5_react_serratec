@@ -65,7 +65,7 @@ const Item = () => {
 
             setProduto((prevProduto) => ({
                 ...prevProduto,
-                Deslikes: novoNumeroDeDeslikes 
+                deslikes: novoNumeroDeDeslikes 
             }))
             alert('Obrigado pela sua avaliação!')
             console.log("Produto atualizado com sucesso:", response.data);
@@ -83,6 +83,8 @@ const Item = () => {
                 nome={produto.nome}
                 descricao={produto.descricao}
                 preco={produto.preco}
+                likes={produto.likes}
+                deslikes={produto.deslikes}
                 onComprarClick={handleComprarClick}
                 onLikeClick={handleLikeClick}
                 onDeslikeClick={handleDeslikeClick}
