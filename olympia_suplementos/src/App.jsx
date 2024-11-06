@@ -41,7 +41,7 @@ function App() {
             <Route exact path='/signup' component={Cadastro} />
             <Route exact path='/catalogo/:categoria' component={Catalogo} />
             <Route exact path='/item/:id' component={Item} />
-            <Route exact path='/pedidos' component={Pedidos} />
+            <Route exact path='/pedidos/:idUser' component={Pedidos} />
           </Switch>
         </div>
       </BrowserRouter>

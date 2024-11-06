@@ -44,6 +44,12 @@ const Carrinho = () => {
         handleValorTotal();
     }, [itens])
 
+    const atualizarEstoque = async () => {
+        for (const item of itens) {
+            const response = api.patch(`/produtos/${id}`, { estoque: (estoque - item.quantidade) })
+        }
+    }
+
     const handleConcluirPedido = async () => {
         if (user && user.id) {
             const pedido = {
@@ -53,7 +59,9 @@ const Carrinho = () => {
             }
             try {
                 const response = api.post('/pedidos', pedido)
-                alert("Pedido concluído com sucesso! Verifique em seu histórico de pedidos.")
+                alert("Pedido concluído com sucesso!")
+                history.push('/pedidos')
+                atualizarEstoque()
                 setItens([])
             } catch {
                 alert("Não foi possível acessar a API.")
@@ -63,6 +71,10 @@ const Carrinho = () => {
             setOpen(false)
             history.push('/login')
         }
+    }
+
+    const handleEsvaziarCarrinhoClick = () => {
+        setItens([])
     }
 
     return <>
@@ -88,8 +100,11 @@ const Carrinho = () => {
                     ))}
                 </div>
                 {console.log(itens[0])}
-                <h3 style={{ marginBottom: "0.5rem" }}>Valor Total: R$ {valorTotal.toFixed(2)}</h3>
-                <button onClick={handleConcluirPedido}>Concluir pedido</button>
+                <h3 style={{ marginBottom: "0.5rem", textAlign: 'right' }}>Valor Total: R$ {valorTotal.toFixed(2)}</h3>
+                <div style={{display: 'flex', justifyContent: 'center', gap: '1rem'}}>
+                    <button onClick={handleConcluirPedido}>Concluir pedido</button>
+                    <button onClick={handleEsvaziarCarrinhoClick}>Esvaziar o carrinho</button>
+                </div>
             </Box>
         </Modal>
     </>
