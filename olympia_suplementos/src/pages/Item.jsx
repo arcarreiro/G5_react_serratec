@@ -38,6 +38,42 @@ const Item = () => {
         }
     }
 
+    const handleLikeClick = async (produtoId) => {
+        try {
+            const novoNumeroDeLikes = produto.likes + 1;
+            const response = await api.patch(`/produtos/${produtoId}`, {
+                likes: novoNumeroDeLikes
+            })
+
+            setProduto((prevProduto) => ({
+                ...prevProduto,
+                likes: novoNumeroDeLikes  
+            }))
+    
+            console.log("Produto atualizado com sucesso:", response.data);
+        } catch (error) {
+            console.error("Erro ao atualizar o produto:", error);
+        }
+    }
+
+    const handleDeslikeClick = async (produtoId) => {
+        try {
+            const novoNumeroDeDeslikes = produto.deslikes + 1;
+            const response = await api.patch(`/produtos/${produtoId}`, {
+                deslikes: novoNumeroDeDeslikes
+            })
+
+            setProduto((prevProduto) => ({
+                ...prevProduto,
+                Deslikes: novoNumeroDeDeslikes 
+            }))
+    
+            console.log("Produto atualizado com sucesso:", response.data);
+        } catch (error) {
+            console.error("Erro ao atualizar o produto:", error);
+        }
+    }
+
     return (
         <>
             <Itens
@@ -48,6 +84,8 @@ const Item = () => {
                 descricao={produto.descricao}
                 preco={produto.preco}
                 onComprarClick={handleComprarClick}
+                onLikeClick={handleLikeClick}
+                onDeslikeClick={handleDeslikeClick}
             />
         </>
     )
