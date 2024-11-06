@@ -5,7 +5,7 @@
   /* Fixa no topo da página */
   right: 0;
   /* left: 0; */
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   padding: 0;

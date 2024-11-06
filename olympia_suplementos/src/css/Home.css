@@ -76,16 +76,18 @@
 }
 
 .text {
-    width: 100%;
+    width: 100vw;
 }
 
 .text h2 {
-    margin: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     font-size: 2rem;
     color: #333333;
 }
 
 hr {
+    width:100vw;
     background-color: #333333;
     border: 1px solid #333333; 
 }

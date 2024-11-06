@@ -9,7 +9,7 @@ const Itens = ({ id, imgurl, nome, descricao, preco, onComprarClick }) => {
                 <div className='infos'>
                     <h2>{nome}</h2>
                     <h4>{descricao}</h4>
-                    <h2>R$ {preco}</h2>
+                    <h2>R$ {Number(preco).toFixed(2)}</h2>
                     <div className="botoes">
                         <button className='botao' onClick={() => { onComprarClick(id) }}>Comprar</button>
                     </div>
