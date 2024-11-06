@@ -41,7 +41,7 @@ const { setProdutos } = useContext(GeneralContext)
             <Route exact path='/signup' component={Cadastro} />
             <Route exact path='/catalogo/:categoria' component={Catalogo} />
             <Route exact path='/item/:id' component={Item} />
-            <Route exact path='/pedidos/:idUser' component={Pedidos} />
+            <Route exact path='/pedidos' component={Pedidos} />
           </Switch>
         </div>
       </BrowserRouter>
