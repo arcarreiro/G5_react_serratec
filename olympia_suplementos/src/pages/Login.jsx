@@ -25,9 +25,15 @@ const Login = () =>{
             const response = await api.get('/users/', {
                 params: {email:mail, senha:pass}
             })
-            setUser(response.data)
-            console.log(response.data)
-        } catch {alert('Usuario e/ou senha incorretos.')}
+            if (response.data.length > 0){
+            setUser(response.data[0])
+            console.log(user)
+            } else {
+                alert('Usuario e/ou senha incorretos.')
+            }
+        } catch {
+            alert('Não foi possível acessar a api.')
+        }
     }
     
     return (<>
