@@ -12,7 +12,7 @@ const Produto = ({ id, imgurl, nome, descricao, preco, categoria, estoque, onAdi
                 <p>{estoque}</p>
                 <div className="botoes">
                     <button className='botao' onClick={() => { onAdicionarCarrinhoClick(id) }}>Adicionar ao carrinho</button>
-                    <button className='botao' onClick={() => { onComprarClick(id) }}>Comprar</button> 
+                    <button className='botao' onClick={() => { onComprarClick(id) }}>Comprar</button>
                 </div>
             </div>
         </>
