@@ -14,7 +14,6 @@
     flex-direction: column;
     align-items: center;
     width: 25rem;
-    transition: font-size 0.3s ease;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -45,7 +44,7 @@
     border-radius: 8px;
     padding: 1rem;
     box-shadow: #212529 0px 5px 15px;
-    width: 86rem;
+    width: calc(25rem * 3 + 120px);
     transition: font-size 0.3s ease;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -75,4 +74,19 @@
 
 .text {
     width: 100%;
+}
+
+@media (max-width: 500px) {
+
+    .cardHome {
+        width: 100%;
+    }
+    
+    .cardHome img {
+        width: 100%;
+    }
+
+    .cardHomeDois {
+        width: 100%;
+    }
 }

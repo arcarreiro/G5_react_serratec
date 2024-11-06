@@ -15,7 +15,8 @@ const Home = () => {
                 margin: '2rem',
                 display: 'flex',
                 flexWrap: 'wrap',
-                justifyContent: 'space-around'
+                justifyContent: 'center',
+                gap: '60px'
             }}>
                 <div className="cardHome">
                     <a href='https://nav.dasa.com.br/blog/como-ganhar-massa-muscular' target="_blank"><img src='https://www.gsuplementos.com.br/upload/menu/nova-home-banners-resultado/e8aecdef115c298d4784694177d046b4.webp' /></a>
