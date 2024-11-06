@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 
 const GeneralContext = createContext({})
 
-const GeneralProvider = ({ children }) => {
+const GeneralProvider = ({children}) => {
     // pedido
     const [itens, setItens] = useState([])
     const [valorTotal, setValorTotal] = useState(0)

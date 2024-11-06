@@ -15,7 +15,7 @@ const Header = () => {
         <>
             <div className="outer-banner">
                 <div className="banner">
-                    <a href="/"><img src="/public/logo.png" alt="Banner Image" className="banner-image" /></a>
+                    <a href="/"><img src="/logo.png" alt="Banner Image" className="banner-image" /></a>
                     <div className='right-banner'>
                         {user && user.nome ?
                         <p>
