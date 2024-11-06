@@ -2,20 +2,24 @@
     background-color: #4C4C4C;
     border-radius: 8px;
     padding: 2rem;
-    padding-bottom: 1rem;
-    margin-top: 2rem;
+    margin: 2rem;
     box-shadow: #212529 0px 5px 15px;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .imagem {
     width: 60%;
     margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .imagem img {
+    width: 30rem;
+    border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
@@ -42,4 +46,37 @@
     width: 100%;
     margin: 2rem;
     font-size: 3rem;
+}
+
+@media (max-width: 1024px) {
+
+    .cardItem {
+        flex-direction: column;
+        padding: auto;
+    }
+
+    .imagem img {
+        width: 30rem;
+    }
+
+    .infos {
+        width: 80%;
+    }
+
+    .infos h2 {
+        font-size: 1.2rem;
+    }
+
+    .botao {
+        width: 10rem;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .imagem img {
+        width: 15rem;
+    }
+
 }
