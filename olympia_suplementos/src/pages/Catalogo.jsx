@@ -27,6 +27,7 @@ const Catalogo = () => {
             const isProdutoNoCarrinho = itens.some((item) => item.idProduto === produtoId);
             if (!isProdutoNoCarrinho) {
                 setItens((prevItens) => [...prevItens, itemAdicionar]);
+                alert('Produto adicionado no carrinho!');
             } else {
                 alert('Produto já está no carrinho!');
             }
