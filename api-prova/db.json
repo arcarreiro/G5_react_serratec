@@ -129,6 +129,94 @@
       "estoque": 235,
       "likes": 0,
       "deslikes": 0
+    },
+    {
+      "id": "bdab",
+      "nome": "Camisa Térmica Manga Longa",
+      "imgurl": "https://www.gsuplementos.com.br/upload/produto/layout/2767/camiseta-termica-manga-longa-growth-manuscrito-duo-cinza-e-preta-01.webp",
+      "descricao": "Composição Camiseta manga longa térmica com proteção uv+50: % Poliamida, 12% Elastano.",
+      "preco": 130,
+      "categoria": "roupas",
+      "estoque": 325,
+      "likes": 0,
+      "deslikes": 0
+    },
+    {
+      "id": "0ae3",
+      "nome": "Bermuda Fit Preta",
+      "imgurl": "https://www.gsuplementos.com.br/upload/produto/layout/2728/bermuda-growth-fit-preta-01.webp",
+      "descricao": "Composição: 85% Algodão, 10% Poliéster, 5% Elastano.",
+      "preco": 115,
+      "categoria": "roupas",
+      "estoque": 231,
+      "likes": 0,
+      "deslikes": 0
+    },
+    {
+      "id": "e2a8",
+      "nome": "Blusão Moletom",
+      "imgurl": "https://www.gsuplementos.com.br/upload/produto/layout/2714/blusao-moletom-growth-under-preto-01.webp",
+      "descricao": "Composição: 50% Algodão, 50% Poliésterr, Moletom 3 cabos peluciado.",
+      "preco": 300,
+      "categoria": "roupas",
+      "estoque": 155,
+      "likes": 0,
+      "deslikes": 0
+    },
+    {
+      "id": "942c",
+      "nome": "Fita Strap Faixa Preta (Par)",
+      "imgurl": "https://www.gsuplementos.com.br/upload/produto/imagem/fita-strap-faixa-preta-growth-manuscrito-par-growth-supplements-1.webp",
+      "descricao": "A Fita Strap Faixa Preta é ideal para aumentar sua performance em treinos de musculação e atividades que exigem força e estabilidade. Feita com material resistente e confortável, essa fita proporciona um ajuste seguro aos pulsos, oferecendo maior segurança e suporte durante o levantamento de peso. Cada par foi projetado para garantir uma pegada firme, reduzindo o esforço nas mãos e antebraços, permitindo maior foco na execução dos exercícios.",
+      "preco": 39,
+      "categoria": "acessorios",
+      "estoque": 250,
+      "likes": 0,
+      "deslikes": 0
+    },
+    {
+      "id": "3750",
+      "nome": "Sacola Tipo Mochila",
+      "imgurl": "https://www.gsuplementos.com.br/upload/produto/layout/1451/mockup.webp",
+      "descricao": "A Sacola Tipo Mochila é prática e estilosa, ideal para carregar acessórios de treino e itens pessoais. Leve, resistente e com fechamento em cordão, oferece conforto e praticidade no dia a dia, com design esportivo e funcional.",
+      "preco": 9,
+      "categoria": "acessorios",
+      "estoque": 500,
+      "likes": 0,
+      "deslikes": 0
+    },
+    {
+      "id": "5c45",
+      "nome": "Munhequeira Faixa de Pulso (Par)",
+      "imgurl": "https://www.gsuplementos.com.br/upload/produto/imagem/munhequeira-faixa-de-pulso-manuscrito-par-growth-supplements-2.webp",
+      "descricao": "A Munhequeira Faixa de Pulso oferece suporte firme e confortável para os pulsos, ideal para treinos intensos de musculação e atividades físicas. Feita com material resistente, proporciona estabilidade e segurança, reduzindo o risco de lesões e aumentando a performance nos exercícios. Com design esportivo e o logo manuscrito da Growth, é perfeita para quem busca proteção e estilo.",
+      "preco": 60,
+      "categoria": "acessorios",
+      "estoque": 500,
+      "likes": 0,
+      "deslikes": 0
+    },
+    {
+      "id": "bccb",
+      "nome": "Luva de Treino (Par)",
+      "imgurl": "https://www.gsuplementos.com.br/upload/produto/imagem/luva-de-treino-growth-par-growth-supplements.webp",
+      "descricao": "A Luva de Treino Preta (Par) oferece proteção e aderência para treinos de musculação e exercícios de alta intensidade. Confortáveis e resistentes, essas luvas ajudam a evitar calos e proporcionam maior estabilidade durante o uso de pesos, garantindo segurança e desempenho nos movimentos. Perfeitas para quem busca conforto e eficiência nos treinos.",
+      "preco": 65,
+      "categoria": "acessorios",
+      "estoque": 200,
+      "likes": 0,
+      "deslikes": 0
+    },
+    {
+      "id": "0200",
+      "nome": "Mala Fitness",
+      "imgurl": "https://www.gsuplementos.com.br/upload/produto/imagem/mala-team-growth-growth-supplements-2.png",
+      "descricao": "A Mala Fitness é perfeita para quem busca praticidade e estilo na hora de transportar seus itens de treino. Com compartimentos amplos e bem distribuídos, oferece espaço suficiente para roupas, acessórios e equipamentos de academia. Feita com material resistente e durável, a mala é ideal para quem tem uma rotina ativa e precisa de uma opção funcional e moderna para carregar tudo o que precisa para seus treinos.",
+      "preco": 90,
+      "categoria": "acessorios",
+      "estoque": 320,
+      "likes": 0,
+      "deslikes": 0
     }
   ],
   "pedidos": [
